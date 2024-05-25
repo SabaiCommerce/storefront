@@ -10,6 +10,7 @@ import useNavbar from '@/hooks/useNavbar';
 import Footer from './Footer';
 import FooterNavbar from './header/navbar/FooterNavbar';
 import BackToTop from './BackToTop';
+import { useSelectedLayoutSegments } from 'next/navigation';
 
 interface Props {
     children: React.ReactNode;
@@ -25,12 +26,19 @@ const ClientOnly = ({ children }: Props) => {
     //         onClose()
     //     }
     // }, [isMediumDevice, isOpen, onClose])
+    const segments = useSelectedLayoutSegments()
     return (
         <Wrapper>
             <MobileNavbar />
             <div className="w-full">
                 <Header />
                 <Navbar />
+                {/* {segments[0]}
+                {segments[0] === "product" ? (
+                    <main>{children}</main>
+                ) : (
+                    <main className="main-container">{children}</main>
+                )} */}
                 <main className="main-container">{children}</main>
                 <Footer />
                 <FooterNavbar />
