@@ -3,25 +3,81 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html,
 body {
-  
+    height: 100%;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer components {
+    .header-menu {
+        @apply text-[12px] text-color-secondary relative;
+    }
+    .header-menu-btn-space {
+        @apply flex items-center space-x-1;
+    }
+    .header-menu-btn {
+        @apply flex items-center;
+    }
+    .live-vertical {
+        @apply hidden md:inline absolute h-6 w-[0.9px] lg:w-[1.2px] bg-[#e1e1e1] bottom-0 translate-y-1/2;
+    }
+    .menu {
+        @apply text-sm font-semibold text-[#2e3237] capitalize relative before:rounded-full py-2 inline before:bg-[#2e3237] before:absolute before:bottom-1 before:-left-0 before:block before:h-[2.5px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100;
+    }
+    .main-container {
+        @apply container max-w-[1220px] px-[18.5px] mx-auto;
+    }
+}
+
+.swiper-pagination {
+    bottom: 35px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #979799 !important;
+    border: 1px solid #68b8ff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    width: 20px !important;
+    height: 6px;
+    transition: width 0.5s;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    background: #ffffff !important;
+    border: 1px solid transparent;
 }
