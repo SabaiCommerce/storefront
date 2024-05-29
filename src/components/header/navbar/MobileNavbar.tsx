@@ -47,7 +47,7 @@ const MobileNavbar = () => {
                     leaveTo="-translate-x-full"
                     as="div"
                 >
-                    <div className="p-5 min-w-80 bg-color-dark-gunmetal-100 h-full transition-all ease-in-out scale-105 duration-500">
+                    <div className="p-5 min-w-80 mt-24 bg-color-dark-gunmetal-100 h-full transition-all ease-in-out scale-105 duration-500">
                         <div className="w-full mt-5 mb-3 relative box-border overflow-hidden">
                             <input
                                 type="text"

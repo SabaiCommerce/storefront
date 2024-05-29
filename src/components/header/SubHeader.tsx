@@ -55,8 +55,8 @@ const SubHeader = () => {
                             size={25}
                         />
                     </div>
-                    <ul className="flex items-center space-x-3">
-                        <li className="pr-1.5">
+                    <ul className="flex items-center space-x-2 lg:space-x-3">
+                        <li className="lg:pr-1.5">
                             <a
                                 href="tel:+"
                                 className="flex items-center space-x-2"
@@ -81,7 +81,7 @@ const SubHeader = () => {
                         <li className="relative hidden lg:inline">
                             <div className="live-vertical" />
                         </li>
-                        <li className="relative group lg:flex hidden flex-col justify-center pl-1.5 cursor-pointer">
+                        <li className="relative group lg:flex hidden flex-col justify-center lg:pl-1.5">
                             <span className="text-[12px]">Shopping Cart:</span>
                             <strong className="text-sm">$0.00</strong>
                             <Dropdown className="left-1/2 transform -translate-x-2/3 w-max px-16 py-5">

@@ -1,8 +1,12 @@
+'use client';
+
 import Image from 'next/image';
 import { Button } from '../ui/button';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import { useRouter } from 'next/navigation';
 
 const TopCategories = () => {
+    const router = useRouter();
     return (
         <section className="mt-[81px]">
             <h2 className="text-center text-[24px] font-bold tracking-[-0.6px]">
@@ -27,10 +31,16 @@ const TopCategories = () => {
                         </h3>
                     </div>
                     <div className="absolute flex items-center space-x-3.5 left-1/2 transform -translate-x-1/2 bottom-[30px]">
-                        <Button className="capitalize px-10 py-[1.6rem] text-[14px] font-semibold">
+                        <Button
+                            onClick={() => router.push('/product/1')}
+                            className="capitalize px-10 py-[1.6rem] text-[14px] font-semibold"
+                        >
                             Women&apos;s
                         </Button>
-                        <Button className="capitalize px-10 py-[1.6rem] text-[14px] font-semibold">
+                        <Button
+                            onClick={() => router.push('/product/1')}
+                            className="capitalize px-10 py-[1.6rem] text-[14px] font-semibold"
+                        >
                             Men&apos;s
                         </Button>
                     </div>
@@ -46,7 +56,10 @@ const TopCategories = () => {
                             className="object-cover size-full"
                         />
                         <div className="absolute flex items-center space-x-3.5 left-1/2 transform -translate-x-1/2 bottom-[30px]">
-                            <Button className="capitalize px-7 py-[1.6rem] text-[14px] font-semibold hover:text-white transition-all duration-500 ease relative overflow-hidden group-hover:pr-14">
+                            <Button
+                                onClick={() => router.push('/product/1')}
+                                className="capitalize px-7 py-[1.6rem] text-[14px] font-semibold hover:text-white transition-all duration-500 ease relative overflow-hidden group-hover:pr-14"
+                            >
                                 <span>Women&apos;s T-Shirt</span>{' '}
                                 <IoIosArrowRoundForward
                                     className="absolute -right-2 top-1/2 -translate-y-1/2 transform-cpu opacity-0 invisible group-hover:opacity-100 group-hover:visible -translate-x-10 group-hover:-translate-x-7"
@@ -65,7 +78,10 @@ const TopCategories = () => {
                             className="object-cover size-full"
                         />
                         <div className="absolute flex items-center space-x-3.5 left-1/2 transform -translate-x-1/2 bottom-[30px]">
-                            <Button className="capitalize px-7 py-[1.6rem] text-[14px] font-semibold hover:text-white transition-all duration-500 ease relative overflow-hidden group-hover:pr-14">
+                            <Button
+                                onClick={() => router.push('/product/1')}
+                                className="capitalize px-7 py-[1.6rem] text-[14px] font-semibold hover:text-white transition-all duration-500 ease relative overflow-hidden group-hover:pr-14"
+                            >
                                 <span>Sports & Outdoors</span>{' '}
                                 <IoIosArrowRoundForward
                                     className="absolute -right-2 top-1/2 -translate-y-1/2 transform-cpu opacity-0 invisible group-hover:opacity-100 group-hover:visible -translate-x-10 group-hover:-translate-x-7"

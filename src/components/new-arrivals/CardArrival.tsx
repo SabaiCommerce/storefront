@@ -27,7 +27,7 @@ const CardArrival = ({ img, title, subtitle, text }: Props) => {
                 </h3>
                 <div className="mt-[18px] w-max">
                     <Link
-                        href="/"
+                        href="/product/1"
                         className="uppercase group relative leading-[2.14em] font-semibold"
                     >
                         <div className="flex items-center space-x-2">

@@ -35,6 +35,25 @@ body {
     .text-balance {
         text-wrap: balance;
     }
+    .c-scrollbar::-webkit-scrollbar {
+        height: 0.5rem;
+    }
+    .c-scrollbar::-webkit-scrollbar-thumb {
+        background: #929292;
+        border-radius: 1rem;
+    }
+    .c-scrollbar::-webkit-scrollbar-thumb:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    /* Scroll track styles (Background) */
+    .c-scrollbar::-webkit-scrollbar-track {
+        background: #d5d5d5;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
 }
 
 @layer components {
@@ -48,7 +67,7 @@ body {
         @apply flex items-center;
     }
     .live-vertical {
-        @apply hidden md:inline absolute h-6 w-[0.9px] lg:w-[1.2px] bg-[#e1e1e1] bottom-0 translate-y-1/2;
+        @apply hidden md:inline-flex absolute h-6 w-[0.9px] lg:w-[1px] bg-[#e1e1e1] bottom-0 translate-y-1/2;
     }
     .menu {
         @apply text-sm font-semibold text-[#2e3237] capitalize relative before:rounded-full py-2 inline before:bg-[#2e3237] before:absolute before:bottom-1 before:-left-0 before:block before:h-[2.5px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-300 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100;
@@ -80,4 +99,14 @@ body {
     border-bottom-right-radius: 5px !important;
     background: #ffffff !important;
     border: 1px solid transparent;
+}
+
+.swiper-slide-thumb-active img {
+    border: 2px solid black !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px !important;
+    color: #222222;
 }

@@ -1,14 +1,19 @@
 'use client';
 
+import 'swiper/css';
+import 'swiper/css/effect-fade';
+import 'swiper/css/pagination';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { EffectFade, Pagination } from 'swiper/modules';
 import { useEffect, useState } from 'react';
 import { useTransition } from 'react-transition-state';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
+import { useRouter } from 'next/navigation';
 
 const Slider = () => {
+    const router = useRouter();
     const [mounted, setMounted] = useState(false);
     const [{ isMounted }, toggle] = useTransition({
         timeout: 500,
@@ -30,11 +35,10 @@ const Slider = () => {
                 spaceBetween={30}
                 effect="fade"
                 grabCursor={true}
-                navigation={true}
                 pagination={{
                     clickable: true
                 }}
-                modules={[EffectFade, Navigation, Pagination]}
+                modules={[EffectFade, Pagination]}
                 className="mySwiper"
                 onSlideChange={() => {
                     toggle();
@@ -47,7 +51,7 @@ const Slider = () => {
                             src="/assets/images/home/1.jpg"
                             alt="side-demo"
                             fill
-                            priority={false}
+                            priority
                             className="object-cover size-full rounded"
                         />
                         <div className="absolute transform-cpu -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 text-white">
@@ -59,7 +63,7 @@ const Slider = () => {
                                     <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px]">
                                         COLLECTION
                                     </h2>
-                                    <h4 className="text-[24px] animate-fade-up text-right md:text-[30px] leading-[30px]">
+                                    <h4 className="text-[24px] animate-fade-up text-right md:mr-[16px] md:text-[30px] leading-[30px]">
                                         Start at{' '}
                                         <strong className="text-color-primary">
                                             $19.99
@@ -103,7 +107,12 @@ const Slider = () => {
                                         Get Free Shipping on all orders over
                                         $99.00
                                     </p>
-                                    <Button className="px-[2.8em] py-[1.8rem]">
+                                    <Button
+                                        onClick={() =>
+                                            router.push('/product/1')
+                                        }
+                                        className="px-[2.8em] py-[1.8rem]"
+                                    >
                                         shop now
                                     </Button>
                                 </>
