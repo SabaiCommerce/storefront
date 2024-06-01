@@ -15,7 +15,7 @@ export default function Home() {
             <TopCategories />
             <SmallBanner />
             <GeneralSelling headerTitle="Our Featured" data={data.data} />
-            <DeliveryInfo />
+            {/* <DeliveryInfo /> */}
         </div>
     );
 }

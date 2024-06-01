@@ -12,7 +12,7 @@ const Header = () => {
                     <div className="overflow-x-hidden flex-grow">
                         <div className="animate-marquee2 sm:animate-none whitespace-nowrap">
                             <p className="text-[12px] text-color-secondary">
-                                Welcome to Riode store message or remove it!
+                                &nbsp;
                             </p>
                         </div>
                     </div>

@@ -66,7 +66,7 @@ const Slider = () => {
                                     <h4 className="text-[24px] animate-fade-up text-right md:mr-[16px] md:text-[30px] leading-[30px]">
                                         Start at{' '}
                                         <strong className="text-color-primary">
-                                            $19.99
+                                            $8.99
                                         </strong>
                                     </h4>
                                 </>
