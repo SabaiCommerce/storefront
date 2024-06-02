@@ -48,7 +48,7 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
                         <Image
-                            src="/assets/images/home/1.jpg"
+                            src="/assets/images/home/ss.jpg"
                             alt="side-demo"
                             fill
                             priority
@@ -57,16 +57,16 @@ const Slider = () => {
                         <div className="absolute transform-cpu -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 text-white">
                             {!isMounted && (
                                 <>
-                                    <h3 className="uppercase animate-fade-right text-[24px] md:text-[30px] font-semibold leading-[30px]">
+                                    <h2 className="uppercase animate-fade-right text-[35px] md:text-[70px] font-semibold leading-[30px] text-white">
                                         Men’s wear
-                                    </h3>
-                                    <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px]">
-                                        COLLECTION
+                                    </h2>
+                                    <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px] text-white">
+                                        T-Shirt
                                     </h2>
                                     <h4 className="text-[24px] animate-fade-up text-right md:mr-[16px] md:text-[30px] leading-[30px]">
                                         Start at{' '}
                                         <strong className="text-color-primary">
-                                            $19.99
+                                            $10.00
                                         </strong>
                                     </h4>
                                 </>
@@ -77,7 +77,7 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
                         <Image
-                            src="/assets/images/home/2.jpg"
+                            src="/assets/images/home/mm.jpg"
                             alt="side-demo"
                             fill
                             priority={false}
@@ -87,7 +87,7 @@ const Slider = () => {
                             {isMounted && (
                                 <>
                                     <h3 className="text-[24px] animate-fade-down md:text-[30px] font-normal text-[#FFF9] tracking-[-.75px] leading-[30px]">
-                                        Lifestyle collection
+                                        Summer collection
                                     </h3>
                                     <h2
                                         className={cn(
@@ -100,12 +100,12 @@ const Slider = () => {
                                     <h4 className="text-[24px] md:text-[30px] leading-[30px] mt-[17px] animate-fade-down">
                                         SALE UP TO{' '}
                                         <strong className="text-color-primary">
-                                            30% OFF
+                                            10% OFF
                                         </strong>
                                     </h4>
                                     <p className="text-[#FFF9] text-[11.2px] md:text-[14px] tracking-[-.14px] animate-fade-up">
                                         Get Free Shipping on all orders over
-                                        $99.00
+                                        $15.00
                                     </p>
                                     <Button
                                         onClick={() =>
