@@ -77,6 +77,35 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
                         <Image
+                            src="/assets/images/home/ss.jpg"
+                            alt="side-demo"
+                            fill
+                            priority={false}
+                            className="object-cover size-full rounded"
+                        />
+                        <div className="absolute transform-cpu -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 text-white">
+                            {!isMounted && (
+                                <>
+                                    <h2 className="uppercase animate-fade-right text-[25px] md:text-[70px] font-semibold leading-[30px] text-white">
+                                        Men’s wear2
+                                    </h2>
+                                    <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px] text-white">
+                                        T-Shirt
+                                    </h2>
+                                    <h4 className="text-[24px] animate-fade-up text-right md:mr-[16px] md:text-[30px] leading-[30px]">
+                                        Start at{' '}
+                                        <strong className="text-color-primary">
+                                            $10.00
+                                        </strong>
+                                    </h4>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
+                        <Image
                             src="/assets/images/home/mm.jpg"
                             alt="side-demo"
                             fill
