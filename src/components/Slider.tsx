@@ -22,17 +22,22 @@ const Slider = () => {
         preEnter: true
     });
     useEffect(() => {
-        setMounted(true);
-        if (isMounted) {
+        if (!isMounted) {
             setTimeout(() => {
                 setMounted(false);
-            }, 1000);
+            }, 500);
         }
-    }, [isMounted]);
+        if (isMounted) {
+            setTimeout(() => {
+                toggle(false);
+            }, 500);
+        }
+    }, [isMounted, toggle]);
     return (
         <section className="min-h-[550px]">
             <Swiper
                 spaceBetween={30}
+                slidesPerView={1}
                 effect="fade"
                 grabCursor={true}
                 pagination={{
@@ -42,7 +47,7 @@ const Slider = () => {
                 className="mySwiper"
                 onSlideChange={() => {
                     toggle();
-                    setMounted(false);
+                    setMounted(true);
                 }}
             >
                 <SwiperSlide>
@@ -77,25 +82,25 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
                         <Image
-                            src="/assets/images/home/ss.jpg"
+                            src="/assets/images/home/hello.webp"
                             alt="side-demo"
                             fill
-                            priority={false}
+                            priority
                             className="object-cover size-full rounded"
                         />
                         <div className="absolute transform-cpu -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 z-10 text-white">
                             {!isMounted && (
                                 <>
-                                    <h2 className="uppercase animate-fade-right text-[25px] md:text-[70px] font-semibold leading-[30px] text-white">
-                                        Men’s wear2
-                                    </h2>
-                                    <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px] text-white">
-                                        T-Shirt
+                                    <h3 className="uppercase animate-fade-right text-[24px] md:text-[30px] font-semibold leading-[30px]">
+                                        Men’s wear
+                                    </h3>
+                                    <h2 className="uppercase animate-fade-right text-[44px] md:text-[80px] font-bold leading-[48.4px] md:leading-[88px] tracking-normal md:tracking-[16px]">
+                                        COLLECTION
                                     </h2>
                                     <h4 className="text-[24px] animate-fade-up text-right md:mr-[16px] md:text-[30px] leading-[30px]">
                                         Start at{' '}
                                         <strong className="text-color-primary">
-                                            $10.00
+                                            $19.99
                                         </strong>
                                     </h4>
                                 </>
@@ -106,14 +111,14 @@ const Slider = () => {
                 <SwiperSlide>
                     <div className="w-full relative h-[530px] md:h-[520px] lg:h-[550px] rounded">
                         <Image
-                            src="/assets/images/home/mm.jpg"
+                            src="/assets/images/home/2.jpg"
                             alt="side-demo"
                             fill
                             priority={false}
                             className="object-cover size-full rounded"
                         />
                         <div className="absolute top-32 left-3 md:left-24 z-10 text-white">
-                            {isMounted && (
+                            {!isMounted && (
                                 <>
                                     <h3 className="text-[24px] animate-fade-down md:text-[30px] font-normal text-[#FFF9] tracking-[-.75px] leading-[30px]">
                                         Summer collection
@@ -121,7 +126,7 @@ const Slider = () => {
                                     <h2
                                         className={cn(
                                             'uppercase text-[44px] md:text-[5S0px] font-bold leading-[48.4px] md:leading-[50px] tracking-normal md:tracking-[-2.5px] animate-jump-in animate-delay-300 animate-once',
-                                            isMounted && mounted && 'blur-md'
+                                            !isMounted && mounted && 'blur-md'
                                         )}
                                     >
                                         FOR WOMEN
