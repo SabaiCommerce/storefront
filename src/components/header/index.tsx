@@ -7,7 +7,7 @@ import SubHeader from './SubHeader';
 const Header = () => {
     return (
         <header>
-            <div className="py-[10px] border-b">
+            {/* <div className="py-[10px] border-b">
                 <div className="main-container flex items-center justify-between">
                     <div className="overflow-x-hidden flex-grow">
                         <div className="animate-marquee2 sm:animate-none whitespace-nowrap">
@@ -65,7 +65,7 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
             <SubHeader />
         </header>
     );
