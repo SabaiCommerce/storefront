@@ -39,10 +39,10 @@ import { IoMdClose } from 'react-icons/io';
 import InnerImageZoom from 'react-inner-image-zoom';
 
 const images = [
-    '/assets/images/product-detail/1-3.jpg',
-    '/assets/images/product-detail/2-5.jpg',
-    '/assets/images/product-detail/3-4.jpg',
-    '/assets/images/product-detail/4-2.jpg'
+    '/assets/images/product-detail/p1.jpg',
+    '/assets/images/product-detail/p2.jpg',
+    '/assets/images/product-detail/p3.jpg',
+    '/assets/images/product-detail/p4.jpg'
 ];
 
 const DetailProduct = () => {
