@@ -36,15 +36,16 @@ const SubHeader = () => {
                         <Link href="/">
                             <Image
                                 priority
-                                src="/assets/images/logo.png"
-                                className="w-[153px] h-[44px]"
+                                src="/assets/images/ROLLER.png"
+                    
+                                className="w-[130px] h-[104px]"
                                 alt="logo"
-                                width={500}
-                                height={500}
+                                width={550}
+                                height={550}
                             />
                         </Link>
                     </div>
-                    <div className="flex-1 hidden md:inline ml-20 mr-16 relative box-border overflow-hidden">
+                    {/* <div className="flex-1 hidden md:inline ml-20 mr-16 relative box-border overflow-hidden">
                         <input
                             type="text"
                             className="bg-gray-50 border-[2.5px] pr-10 border-gray-300 text-gray-900 text-sm rounded-[0.275rem] focus:placeholder:opacity-0 placeholder:duration-150 placeholder:ease-in focus:outline-none block w-full p-2.5"
@@ -54,12 +55,12 @@ const SubHeader = () => {
                             className="absolute top-1/2 transform -translate-y-1/2 right-3"
                             size={25}
                         />
-                    </div>
+                    </div> */}
                     <ul className="flex items-center space-x-2 lg:space-x-3">
                         <li className="lg:pr-1.5">
                             <a
                                 href="tel:+"
-                                className="flex items-center space-x-2"
+                                className="flex items-right space-x-2"
                             >
                                 <IoCallOutline size={35} />
                                 <div className="lg:flex hidden flex-col justify-center">
@@ -67,7 +68,7 @@ const SubHeader = () => {
                                         Call Us Now:
                                     </span>
                                     <strong className="text-sm">
-                                        0(800) 123-456
+                                        (+855) 10 522 822
                                     </strong>
                                 </div>
                             </a>
@@ -75,13 +76,13 @@ const SubHeader = () => {
                         <li className="relative hidden lg:inline">
                             <div className="live-vertical" />
                         </li>
-                        <li className="cursor-pointer">
+                        {/* <li className="cursor-pointer">
                             <MdFavoriteBorder size={35} />
-                        </li>
-                        <li className="relative hidden lg:inline">
+                        </li> */}
+                        {/* <li className="relative hidden lg:inline">
                             <div className="live-vertical" />
-                        </li>
-                        <li className="relative group lg:flex hidden flex-col justify-center lg:pl-1.5">
+                        </li> */}
+                        {/* <li className="relative group lg:flex hidden flex-col justify-center lg:pl-1.5">
                             <span className="text-[12px]">Shopping Cart:</span>
                             <strong className="text-sm">$0.00</strong>
                             <Dropdown className="left-1/2 transform -translate-x-2/3 w-max px-16 py-5">
@@ -95,7 +96,8 @@ const SubHeader = () => {
                             <div className="absolute inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-500 border-white rounded-full top-0 -end-2">
                                 0
                             </div>
-                        </li>
+                            
+                        </li> */}
                     </ul>
                 </div>
             </div>
